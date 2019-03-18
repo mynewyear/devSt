@@ -1,4 +1,5 @@
 variable source_ranges {
-              description = "Allowed IP addresses"
-              default     = ["0.0.0.0/0"]
+  type        = "list"
+//  description = "Allowed IP addresses"
+//  default     = ["73.222.34.192"]
 }

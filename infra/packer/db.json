@@ -4,7 +4,7 @@
     "type": "googlecompute",
     "project_id": "infra-228007",
     "image_name": "reddit-db-base-{{timestamp}}",
-    "source_image": "ubuntu-1604-xenial-v20181204",
+    "source_image": "ubuntu-1604-xenial-v20190306",
     "zone": "us-central1-b",
     "ssh_username": "appuser",
     "machine_type": "f1-micro"
@@ -12,9 +12,8 @@
 ],
 "provisioners": [
       {
-         "type": "shell",
-         "script": "scripts/install_mongodb.sh",
-         "execute_command": "sudo {{.Path}}"
+        "type": "ansible",
+        "playbook_file": "../ansible/packer_db.yml"
 }
 ]
 

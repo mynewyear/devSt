@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+APP_DIR=${1:-$HOME}
+
 source ~/.profile
 git clone https://github.com/Artemmkin/reddit.git
 cd reddit
